@@ -4,7 +4,7 @@
 
 ## Professional Experience
 
-**Platform Engineering Lead**  | &nbsp; **MASTERCARD** &nbsp; |   **Aug 2019 - _PRESENT_** <br>
+**Platform Engineering Lead** &nbsp; @ &nbsp; **MASTERCARD** &nbsp; | &nbsp;  **Aug 2019 - _PRESENT_** <br>
 No-code platform that enables professionals to build interactive applications.
   - Extending and maintaining a company-wide design system
   - Building a new frontend component library
