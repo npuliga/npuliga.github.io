@@ -1,16 +1,14 @@
 # Naga Puligadda
 
-Platform Engineering Lead
+[Email](mailto:contactpuligadda@gmail.com) / [LinkedIn](https://www.linkedin.com/in/naga.puligadda/) / [GitHub](https://github.com/npuliga)
 
-[Email](mailto:) / [LinkedIn](https://www.linkedin.com/in/naga.puligadda/) / [GitHub](https://github.com/npuliga/) / [Twitter](https://twitter.com/) / [DEV](https://dev.to/)
+## Professional Experience
 
-## 👩🏼‍💻 Technical Experience
-
-**Frontend Engineer** @ [BRYTER](https://bryter.io/) _(Dec 2020 - Present)_ <br>
+**Platform Engineering Lead** | **MASTERCARD** |  **Aug 2019 - _PRESENT_** <br>
 No-code platform that enables professionals to build interactive applications.
   - Extending and maintaining a company-wide design system
   - Building a new frontend component library
-  - **_Technologies used:_** HTML, CSS, Sass, Web Components (LitElement), Vue, TypeScript, Storybook, Jest.
+  - **Technologies used:** HTML, CSS, Sass, Web Components (LitElement), Vue, TypeScript, Storybook, Jest.
 <br><br>
 
 **Google Season of Docs 2020 | Technical Writer** @ [GraphQL Foundation](https://foundation.graphql.org/) _(Aug 2020 - Jan 2021)_ <br>
