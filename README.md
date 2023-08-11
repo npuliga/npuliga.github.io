@@ -1,6 +1,6 @@
 # Naga Puligadda
 
-Software engineer
+Platform Engineering Lead
 
 [Email](mailto:) / [LinkedIn](https://www.linkedin.com/in/naga.puligadda/) / [GitHub](https://github.com/npuliga/) / [Twitter](https://twitter.com/) / [DEV](https://dev.to/)
 
