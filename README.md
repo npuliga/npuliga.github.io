@@ -1,5 +1,5 @@
 # Naga Puligadda
-[rhce](https://images.credly.com/size/340x340/images/19c4e804-54fe-4857-b022-7cfd5520596c/image.png)
+![rhce](https://images.credly.com/size/340x340/images/19c4e804-54fe-4857-b022-7cfd5520596c/image.png)
 
 [Email](mailto:contactpuligadda@gmail.com) / [LinkedIn](https://www.linkedin.com/in/naga.puligadda/) / [GitHub](https://github.com/npuliga)
 
