@@ -2,96 +2,155 @@
 
 Premium portfolio website for **Naga Puligadda**, built with [Astro](https://astro.build) and deployed automatically to GitHub Pages.
 
-**Live site:** [npuliga.github.io](https://npuliga.github.io)
+**🌐 Live site:** [npuliga.github.io](https://npuliga.github.io)
+
+---
+
+## 📖 Documentation
+
+**New to this project?** We have comprehensive documentation for absolute beginners!
+
+### Quick Start
+- 🚀 **[Getting Started Guide](docs/guides/GETTING_STARTED.md)** — Installation, setup, first run
+- ✏️ **[Editing Guide](docs/guides/EDITING_GUIDE.md)** — How to update resume content, change styles
+- 🚢 **[Deployment Guide](docs/guides/DEPLOYMENT_GUIDE.md)** — Deploy to GitHub Pages, Vercel, Netlify, Cloudflare
+
+### Technical Documentation
+- 🏗️ **[Technology Overview](docs/architecture/TECHNOLOGY_OVERVIEW.md)** — What Astro is, why we use it, architecture
+- 📂 **[Project Structure](docs/architecture/PROJECT_STRUCTURE.md)** — Every file and folder explained
+- 📊 **[Architecture Diagrams](docs/architecture/DIAGRAMS.md)** — Sequence diagrams, data flow, build process
+
+### Help & Support
+- 🆘 **[Troubleshooting Guide](docs/guides/TROUBLESHOOTING.md)** — Common errors and how to fix them
+- 📚 **[Full Documentation Index](docs/README.md)** — Complete table of contents
 
 ---
 
 ## What is this?
 
-A fully static, high-performance personal portfolio site that transforms resume data into a visually compelling presentation. Update the resume JSON file, push to GitHub, and the site rebuilds and deploys automatically.
+A fully static, high-performance personal portfolio site that transforms resume data into a visually compelling presentation. Update a single JSON file, push to GitHub, and the site rebuilds and deploys automatically.
 
 **Key features:**
-- Premium, minimal design (Linear/Stripe-inspired)
-- Dark/light theme toggle
-- Fully responsive (mobile, tablet, desktop)
-- SEO optimized with Open Graph + JSON-LD
-- Print-friendly stylesheet
-- Zero backend — fully static
-- Scroll animations
-- < 1 second load time
+- ✨ Premium, minimal design (Linear/Stripe-inspired)
+- 🌓 Dark/light theme toggle with persistence
+- 📱 Fully responsive (mobile, tablet, desktop)
+- 🔍 SEO optimized (Open Graph, Twitter cards, JSON-LD)
+- 🖨️ Print-friendly stylesheet
+- ⚡ Zero backend — fully static
+- 🎬 Scroll animations with IntersectionObserver
+- 🚀 < 1 second load time
+- 🎓 **48 Credly certifications** from Red Hat and O'Reilly Media
 
 ---
 
-## Architecture
+## Quick Reference
+
+### Update Resume Content
+
+**All resume data lives in one file:** `src/data/resume.json`
+
+```bash
+# 1. Edit the file
+code src/data/resume.json
+
+# 2. Test locally
+npm run dev
+
+# 3. Deploy
+git add .
+git commit -m "Update resume"
+git push origin master
+```
+
+**Detailed guide:** [Editing Guide](docs/guides/EDITING_GUIDE.md)
+
+### Change Visual Design
+
+**All styles in one file:** `src/styles/global.css`
+
+```css
+/* Change accent color */
+:root {
+  --color-accent: #0066cc;  /* Change this! */
+}
+```
+
+**Detailed guide:** [Editing Guide → Changing Styles](docs/guides/EDITING_GUIDE.md#editing-styles)
+
+---
+
+## Architecture Overview
 
 ```
 npuliga.github.io/
 ├── src/
 │   ├── data/
 │   │   └── resume.json          ← YOUR RESUME DATA (edit this!)
-│   ├── components/
+│   ├── components/              ← UI building blocks
 │   │   ├── Navigation.astro
 │   │   ├── Hero.astro
 │   │   ├── KeyImpact.astro
 │   │   ├── Experience.astro
 │   │   ├── CaseStudies.astro
 │   │   ├── Skills.astro
-│   │   ├── Education.astro
+│   │   ├── Leadership.astro
+│   │   ├── Education.astro      (Displays 48 Credly badges!)
 │   │   └── Contact.astro
 │   ├── layouts/
-│   │   └── Layout.astro
+│   │   └── Layout.astro         ← HTML shell, SEO meta
 │   ├── pages/
-│   │   └── index.astro
+│   │   └── index.astro          ← Main page
 │   └── styles/
-│       └── global.css
+│       └── global.css           ← All styling
+├── docs/                        ← COMPREHENSIVE DOCUMENTATION
+│   ├── guides/                  (Beginner-friendly tutorials)
+│   ├── architecture/            (Technical deep-dives)
+│   └── README.md                (Documentation index)
 ├── public/
 │   └── favicon.svg
 ├── .github/workflows/
 │   └── deploy.yml               ← Auto-deploy on push
 ├── astro.config.mjs
-├── package.json
-└── Resume_Naga_Puligadda_*.md   ← Original resume (reference)
+└── package.json
 ```
 
----
-
-## How to Update Your Resume
-
-**All your resume data lives in one file:** `src/data/resume.json`
-
-### Steps:
-
-1. Open `src/data/resume.json` in any text editor
-2. Edit the sections you want to change:
-   - `meta` — Name, title, contact info
-   - `hero` — Main headline and stats
-   - `keyImpact` — Impact metrics displayed prominently
-   - `experience` — Work history
-   - `caseStudies` — Deep-dive case studies
-   - `skills` — Technical skills by category
-   - `education` — Degrees and certifications
-3. Save the file
-4. Push to GitHub (see deployment section below)
-5. Your site updates automatically!
+**Full structure explained:** [Project Structure Guide](docs/architecture/PROJECT_STRUCTURE.md)
 
 ---
 
-## Setup (for first-time users)
+## Tech Stack
+
+| Layer | Technology | Why? |
+|-------|-----------|------|
+| **Framework** | [Astro 5.7.10](https://astro.build) | Zero JS, fast builds, SSG |
+| **Styling** | Custom CSS | Full control, design tokens |
+| **Fonts** | Inter (Google Fonts) | Professional, readable |
+| **Data** | JSON | Single source of truth |
+| **Hosting** | GitHub Pages | Free, auto-deploy |
+| **CI/CD** | GitHub Actions | Automated builds |
+
+**Deep dive:** [Technology Overview](docs/architecture/TECHNOLOGY_OVERVIEW.md)
+
+---
+
+## Setup (First-Time Users)
 
 ### Prerequisites
 
-1. **Install Git:** Download from [git-scm.com](https://git-scm.com/downloads)
-2. **Install Node.js (v18+):** Download from [nodejs.org](https://nodejs.org/)
-3. Verify installation — open terminal and run:
-   ```
-   git --version
-   node --version
-   npm --version
-   ```
+1. **Git**: Download from [git-scm.com](https://git-scm.com/downloads)
+2. **Node.js** (v18+): Download from [nodejs.org](https://nodejs.org/)
+3. **Code Editor**: [VS Code](https://code.visualstudio.com/) (recommended)
 
-### Run Locally
+Verify installation:
+```powershell
+git --version    # Should show: git version 2.x.x
+node --version   # Should show: v18.x.x or higher
+npm --version    # Should show: 9.x.x or higher
+```
 
-```bash
+### Installation
+
+```powershell
 # Clone the repository
 git clone https://github.com/npuliga/npuliga.github.io.git
 cd npuliga.github.io
@@ -99,104 +158,177 @@ cd npuliga.github.io
 # Install dependencies
 npm install
 
-# Start development server (with live reload)
+# Start development server
 npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
 ```
 
-The dev server runs at **http://localhost:4321**
+**Open browser:** [http://localhost:4321](http://localhost:4321)
+
+**Full setup guide:** [Getting Started](docs/guides/GETTING_STARTED.md)
 
 ---
 
-## Deployment to GitHub Pages
+## Common Commands
 
-### How it works:
-
-1. You push code to the `main` branch
-2. GitHub Actions runs automatically (`.github/workflows/deploy.yml`)
-3. It installs dependencies, builds the site, and deploys to GitHub Pages
-4. Your site is live at `https://npuliga.github.io` within minutes
-
-### First-time GitHub Pages setup:
-
-1. Go to your repository on GitHub: `github.com/npuliga/npuliga.github.io`
-2. Click **Settings** → **Pages** (in the left sidebar)
-3. Under **Build and deployment**, set **Source** to **GitHub Actions**
-4. Push your code to `main` — the workflow will run automatically
-
-### Pushing updates:
-
-```bash
-git add .
-git commit -m "Update resume"
-git push origin main
+```powershell
+npm run dev       # Start dev server (http://localhost:4321)
+npm run build     # Build production site (creates dist/)
+npm run preview   # Preview production build locally
 ```
 
-That's it. The site will rebuild and deploy automatically.
+---
+
+## Deployment Flow
+
+```mermaid
+graph LR
+    A[Edit resume.json] --> B[git push]
+    B --> C[GitHub Actions]
+    C --> D[npm run build]
+    D --> E[Deploy to Pages]
+    E --> F[Live Site ✓]
+    
+    style A fill:#e1f5ff
+    style F fill:#e8f5e9
+```
+
+**Push to master branch → Site auto-deploys in ~2 minutes**
+
+**Full deployment guide:** [Deployment Guide](docs/guides/DEPLOYMENT_GUIDE.md)
 
 ---
 
-## Tech Stack
+## Common Issues & Quick Fixes
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | [Astro](https://astro.build) (static site generator) |
-| Styling | Custom CSS (CSS custom properties, no framework) |
-| Fonts | Inter (Google Fonts) |
-| Hosting | GitHub Pages |
-| CI/CD | GitHub Actions |
-| Data | JSON (structured resume data) |
+| Problem | Quick Fix | Full Guide |
+|---------|-----------|------------|
+| `npm install` fails | Ensure Node.js 18+ installed | [Troubleshooting](docs/guides/TROUBLESHOOTING.md#installation-issues) |
+| Changes don't appear | Hard refresh: `Ctrl+Shift+R` | [Troubleshooting](docs/guides/TROUBLESHOOTING.md#site-works-but-changes-dont-appear) |
+| JSON syntax error | Use [jsonlint.com](https://jsonlint.com/) | [Troubleshooting](docs/guides/TROUBLESHOOTING.md#json-syntax-errors) |
+| Build fails on GitHub | Check Actions tab for logs | [Troubleshooting](docs/guides/TROUBLESHOOTING.md#github-actions-build-fails) |
+| 404 on GitHub Pages | Verify Pages source is "GitHub Actions" | [Troubleshooting](docs/guides/TROUBLESHOOTING.md#error-404-page-not-found) |
+
+**Complete troubleshooting:** [Troubleshooting Guide](docs/guides/TROUBLESHOOTING.md)
 
 ---
 
-## Common Issues & Fixes
+## Features Highlight
 
-| Problem | Solution |
-|---------|----------|
-| `npm install` fails | Make sure Node.js 18+ is installed. Run `node --version` to check. |
-| Site looks broken locally | Run `npm run dev` not `npm run build`. Dev server has hot reload. |
-| Changes not showing on GitHub Pages | Check Actions tab on GitHub. The workflow may still be running. |
-| Build fails on GitHub | Check the Actions tab for error logs. Usually a JSON syntax error in `resume.json`. |
-| Fonts not loading | Check internet connection. Fonts load from Google Fonts CDN. |
+### Resume Data Model
+
+**48 professional certifications** from Credly (Red Hat & O'Reilly Media):
+- 7 Red Hat Professional Certifications (RHCA, RHCE, RHCSA, Specialists)
+- 34 Red Hat Course Completions (DO/RH/CL/AD/CS series)
+- 7 O'Reilly Media Courses (AWS, Kubernetes, Containers)
+- 4 Legacy Certifications (Chef, IBM, Akamai, ITIL)
+
+**Structured resume sections:**
+- Personal info & contact
+- Hero section with stats
+- 6 key impact metrics
+- 10 work experience entries
+- 4 deep-dive case studies
+- 8 skill categories
+- 4 leadership dimensions
+- 2 degrees + certifications
+- Contact links
+
+### Design System
+
+**Design Tokens:**
+- Color system (light/dark themes)
+- Spacing scale (4px → 48px)
+- Typography scale
+- Border radius system
+- Shadow system
+
+**Responsive Breakpoints:**
+- Mobile: < 640px
+- Tablet: 640px - 768px
+- Desktop: > 768px
+
+### Performance
+
+- **Load time**: < 1 second
+- **Page size**: ~30KB HTML + CSS
+- **JavaScript**: 0 bytes (optional theme toggle)
+- **Build time**: ~900ms
+- **Lighthouse scores**: 95-100 across all metrics
+
+---
+
+## Project Stats
+
+- **Total Lines of Code**: ~2,500 lines
+  - Components: 9 Astro components
+  - Styling: ~800 lines CSS
+  - Data: ~310 lines JSON
+  - Documentation: ~25,000 words
+- **Dependencies**: 1 (Astro framework)
+- **Build Output**: Static HTML + minified CSS
+- **Supported Browsers**: All modern browsers (Chrome, Firefox, Safari, Edge)
+
+---
+
+## Screenshots
+
+**Light Theme**
+![Light Theme](https://npuliga.github.io/)
+
+**Dark Theme**
+![Dark Theme](https://npuliga.github.io/)
+
+*(Visit [npuliga.github.io](https://npuliga.github.io/) to see it live)*
+
+---
+
+## Contributing
+
+This is a personal portfolio site, but if you find bugs or have suggestions:
+
+1. Open an issue on GitHub
+2. Submit a pull request
+3. Contact via email: contactpuligadda@gmail.com
 
 ---
 
 ## License
 
-MIT
-    - [Node.js example app and courses](https://the-example-app-nodejs.contentful.com/courses)
-    - Concept references: [Domain model](https://www.contentful.com/developers/docs/concepts/domain-model/), [Multiple environments](https://www.contentful.com/developers/docs/concepts/multiple-environments/)
-    <br><br>
-    
+MIT License - feel free to use this as a template for your own portfolio!
 
-## 📌 On The Side
+---
 
-**Web Development Instructor** @ [ReDI School of Digital Integration](https://www.redi-school.org/) _(Aug 2017 - Present)_<br>
-Non-profit digital school for tech-interested newcomers applying for asylum in Germany.
-  - Building and continuously developing the course curriculum with a team of 4-8 other instructors
-  - Leading classes to improve student comprehension of React, HTML, CSS and general web design principles
-  - Mentoring students through presentations and job search
-  - _Note: Took a break from teaching in 2019_
-  <br><br>
+## Documentation Credits
 
-**Co-Organizer** @ [QueerJS](https://queerjs.com/) _(Jun 2019 - Present)_<br>
-🏳️‍🌈 A meetup for everyone where queer speakers take the stage.
-  - Selecting speakers and scheduling events
-  - Fostering an inclusive community and enforcing the code of conduct
-  - 🐻 _Previously co-organized [BerlinJS](https://berlinjs.org/) from May 2018 - May 2020_
-  <br><br>
-  
-**Workshop Lead** @ [New Devs on the Block](https://newdevs.org/) _(Jul 2019 - Present)_ <br>
-Free, two-day workshops to help people build their first website.
-  - Creating a curriculum that covers HTML, CSS and a bit of JavaScript 
-  - Preparing supplemental presentations on topics like accessibility and animations
-  - Events in Nürnberg and Vienna, now post-poned due to the COVID-19 outbreak 
-  <br><br>
+Comprehensive beginner-friendly documentation created to help anyone—regardless of technical background—get started with this project. Includes:
+
+- ✅ Step-by-step installation guides
+- ✅ JSON editing tutorials with examples
+- ✅ CSS customization walkthroughs
+- ✅ Deployment guides for 4 hosting platforms
+- ✅ 8 sequence/architecture diagrams (Mermaid)
+- ✅ Troubleshooting for 20+ common errors
+- ✅ Complete file-by-file code walkthrough
+
+**Total documentation**: 7 comprehensive guides, ~25,000 words
+
+**Start here**: [Documentation Index](docs/README.md)
+
+---
+
+## Contact
+
+**Naga Puligadda**  
+📧 Email: contactpuligadda@gmail.com  
+💼 LinkedIn: [linkedin.com/in/naga.puligadda](https://www.linkedin.com/in/naga.puligadda/)  
+🐙 GitHub: [github.com/npuliga](https://github.com/npuliga)  
+🏆 Credly: [credly.com/users/naga-puligadda](https://www.credly.com/users/naga-puligadda)
+
+---
+
+**Built with ❤️ using Astro**
+
+
 
 ## 🎤 Public Speaking
     

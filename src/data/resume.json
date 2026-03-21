@@ -3,16 +3,16 @@
     "name": "Naga Puligadda",
     "title": "Principal Platform Engineer",
     "tagline": "AI/ML Infrastructure & Cloud Strategy | RHCA",
-    "email": "Puligadda.Naga@gmail.com",
+    "email": "contactpuligadda@gmail.com",
     "location": "Pune, India",
-    "phone": "+91-9370049554",
+    "phone": "+91-9999999999",
     "linkedin": "https://www.linkedin.com/in/naga.puligadda/",
     "github": "https://github.com/npuliga",
     "website": "https://npuliga.github.io"
   },
 
   "hero": {
-    "headline": "I architect planet-scale infrastructure where every second of downtime costs millions.",
+    "headline": "I architect large scale infrastructure where every second of downtime costs millions.",
     "subheadline": "Principal Platform Engineer with 15+ years orchestrating mission-critical systems for global fintech and media. Red Hat Certified Architect. AI/ML infrastructure specialist. I bridge the gap between reliability engineering and modern AI workloads.",
     "stats": [
       { "value": "200+", "label": "Payment Gateways Managed" },
@@ -61,7 +61,7 @@
       "location": "Pune, India / New York, NY",
       "role": "Lead Platforms Engineer / Principal Architect (DevOps & Edge)",
       "period": "Sep 2019 – Present",
-      "summary": "Strategic leadership of the Mastercard Edge Platform, overseeing infrastructure for 200+ global payment gateways processing millions of transactions daily.",
+      "summary": "Strategic leadership of the Mastercard's Edge Platform, overseeing infrastructure for 200+ global payment gateways processing millions of transactions daily.",
       "highlights": [
         "Spearheaded migration of 200+ mission-critical Virtual MIPs from CentOS 7 to Oracle Linux 8 with zero data loss and 100% service continuity",
         "Architected physical-to-virtual conversion across 200+ global endpoints in under 2 months, increasing platform scalability by 300%",
@@ -275,16 +275,90 @@
     }
   ],
 
-  "certifications": [
-    "Red Hat Certified Architect (RHCA) in Infrastructure",
-    "Red Hat Certified Engineer (RHCE)",
-    "Red Hat Certified Specialist: OpenShift Administration",
-    "Red Hat Certified Specialist: Ansible Automation",
-    "Certified Chef Developer",
-    "IBM Certified Deployment Professional (UrbanCode Deploy)",
-    "Certified Akamai Web Performance Administrator",
-    "ITIL Foundation (IT Service Management)"
-  ],
+  "certifications": {
+    "professional": [
+      {
+        "name": "Red Hat Certified Architect (RHCA)",
+        "issuer": "Red Hat",
+        "issueDate": "2024",
+        "expiryDate": "Expired Jan 30, 2026",
+        "credlyUrl": "https://www.credly.com/users/naga-puligadda"
+      },
+      {
+        "name": "Red Hat Certified Engineer (RHCE)",
+        "issuer": "Red Hat",
+        "issueDate": "2025",
+        "expiryDate": "Mar 25, 2028",
+        "credlyUrl": "https://www.credly.com/users/naga-puligadda"
+      },
+      {
+        "name": "Red Hat Certified System Administrator (RHCSA)",
+        "issuer": "Red Hat",
+        "issueDate": "2025",
+        "expiryDate": "Mar 25, 2028",
+        "credlyUrl": "https://www.credly.com/users/naga-puligadda"
+      },
+      {
+        "name": "Red Hat Certified Specialist in Containers",
+        "issuer": "Red Hat",
+        "issueDate": "2025",
+        "expiryDate": "Mar 25, 2028",
+        "credlyUrl": "https://www.credly.com/users/naga-puligadda"
+      },
+      {
+        "name": "Red Hat Certified Specialist in OpenShift Virtualization",
+        "issuer": "Red Hat",
+        "issueDate": "2025",
+        "expiryDate": "Jan 21, 2028",
+        "credlyUrl": "https://www.credly.com/users/naga-puligadda"
+      },
+      {
+        "name": "Red Hat Certified Specialist in Developing Automation with Ansible Automation Platform",
+        "issuer": "Red Hat",
+        "issueDate": "2024",
+        "expiryDate": "Mar 20, 2027",
+        "credlyUrl": "https://www.credly.com/users/naga-puligadda"
+      },
+      {
+        "name": "Red Hat Certified Specialist in OpenShift Automation and Integration",
+        "issuer": "Red Hat",
+        "issueDate": "2024",
+        "expiryDate": "Mar 6, 2027",
+        "credlyUrl": "https://www.credly.com/users/naga-puligadda"
+      }
+    ],
+    "courses_redhat": [
+      "Red Hat OpenShift Developer I: Introduction to Containers with Podman (DO188) - Ver. 4.14 (Feb 2025)",
+      "Managing Virtual Machines with Red Hat OpenShift Virtualization (DO316) - Ver. 4.14 (Jan 2025)",
+      "Developing Advanced Automation with Red Hat Ansible Automation Platform (DO374) - Ver. 2.2 (Mar 2024)",
+      "Red Hat OpenShift Administration III: Scaling Deployments in the Enterprise (DO380) - Ver. 4.10 (Feb 2024)",
+      "Red Hat Virtualization (RH318) - Ver. 4.3 (Feb 2024)",
+      "Introduction to Kubernetes Applications (DO100) - Ver. 1.22 (Feb 2024)",
+      "Introduction to Microsoft Azure Red Hat OpenShift (DO121) - Ver. 4.10 (Feb 2024)",
+      "Introduction to Red Hat OpenShift Applications (DO101) - Ver. 4.6 (Feb 2024)",
+      "Introduction to Red Hat OpenShift Service on AWS (DO120) - Ver. 4.12 (Feb 2024)",
+      "Managing Enterprise Automation with Red Hat Ansible Automation Platform (DO467) - Ver. 2.2 (Feb 2024)",
+      "Multicluster Management with Red Hat OpenShift Platform Plus (DO480) - Ver. 2.4 (Feb 2024)",
+      "Red Hat DevOps Pipelines and Processes: CI/CD with Jenkins, Git, and Test Driven Development (DO400) - Ver. 4.6 (Feb 2024)",
+      "Red Hat OpenShift Administration I: Managing Containers and Kubernetes (DO180) - Ver. 4.12 (Feb 2024)",
+      "Red Hat OpenShift Development I: Introduction to Containers with Podman (DO188) - Ver. 4.12 (Feb 2024)",
+    ],
+    "courses_oreilly": [
+      "AWS Certified SA-Pro Course (May 2025)",
+      "EKS Microservices (May 2025)",
+      "Containers Specialist (Mar 2025)",
+      "AWS Tech Essentials (Mar 2025)",
+      "AWS Cert Solutions Arch Course (Feb 2025)",
+      "Kubernetes Course (Feb 2025)",
+      "Linux Under the Hood (Feb 2025)"
+    ],
+    "legacy": [
+      "Certified Chef Developer",
+      "IBM Certified Deployment Professional (UrbanCode Deploy)",
+      "Certified Akamai Web Performance Administrator",
+      "ITIL Foundation (IT Service Management)"
+    ]
+  },
 
   "leadership": [
     {
