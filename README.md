@@ -77,6 +77,31 @@ git push origin master
 
 **Detailed guide:** [Editing Guide → Changing Styles](docs/guides/EDITING_GUIDE.md#editing-styles)
 
+### Generate Resume PDF
+
+The site includes a downloadable resume PDF (clean, professional, no icons/emojis). Regenerate it whenever you update your resume:
+
+```bash
+# Generate PDF from live website
+npm run generate-pdf
+```
+
+This will:
+1. Launch a headless browser
+2. Load https://npuliga.github.io/
+3. Apply professional PDF styles (remove buttons, icons, animations)
+4. Save to `public/resume.pdf`
+
+Then build and deploy:
+```bash
+npm run build
+git add public/resume.pdf
+git commit -m "Update resume PDF"
+git push origin master
+```
+
+**Note:** The script fetches your live website, so deploy resume changes first, then regenerate the PDF.
+
 ---
 
 ## Architecture Overview
@@ -107,7 +132,8 @@ npuliga.github.io/
 │   ├── architecture/            (Technical deep-dives)
 │   └── README.md                (Documentation index)
 ├── public/
-│   └── favicon.svg
+│   ├── favicon.svg
+│   └── resume.pdf               ← Downloadable PDF
 ├── .github/workflows/
 │   └── deploy.yml               ← Auto-deploy on push
 ├── astro.config.mjs
