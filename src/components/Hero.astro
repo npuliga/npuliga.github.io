@@ -1,0 +1,26 @@
+---
+import resume from '../data/resume.json';
+const { hero, meta } = resume;
+---
+
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-eyebrow">{meta.title} · {meta.tagline}</p>
+      <h1>{hero.headline}</h1>
+      <p class="hero-description">{hero.subheadline}</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get in Touch →</a>
+        <a href="#case-studies" class="btn btn-secondary">View Case Studies</a>
+      </div>
+      <div class="hero-stats">
+        {hero.stats.map((stat: { value: string; label: string }) => (
+          <div class="hero-stat">
+            <div class="hero-stat-value">{stat.value}</div>
+            <div class="hero-stat-label">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

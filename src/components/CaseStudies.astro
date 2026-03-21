@@ -1,0 +1,45 @@
+---
+import resume from '../data/resume.json';
+
+interface CaseStudy {
+  title: string;
+  challenge: string;
+  approach: string;
+  outcome: string;
+  impact: string[];
+  tags: string[];
+}
+
+const { caseStudies } = resume;
+---
+
+<section id="case-studies">
+  <div class="container">
+    <span class="section-label">Case Studies</span>
+    <h2 class="section-title">Deep dives into real problems I've solved</h2>
+    <div class="case-studies-grid">
+      {(caseStudies as CaseStudy[]).map((study, i) => (
+        <div class="card case-study-card animate-in" style={`transition-delay: ${i * 100}ms`}>
+          <h3>{study.title}</h3>
+          <div class="case-study-section">
+            <div class="case-study-section-label">Challenge</div>
+            <p>{study.challenge}</p>
+          </div>
+          <div class="case-study-section">
+            <div class="case-study-section-label">Approach</div>
+            <p>{study.approach}</p>
+          </div>
+          <div class="case-study-section">
+            <div class="case-study-section-label">Outcome</div>
+            <p>{study.outcome}</p>
+          </div>
+          <div class="case-study-impact">
+            {study.impact.map((item: string) => (
+              <span class="case-study-impact-item">✦ {item}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

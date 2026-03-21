@@ -1,0 +1,35 @@
+---
+import resume from '../data/resume.json';
+const { meta } = resume;
+---
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <span class="section-label">Get in Touch</span>
+    <h2>Let's build something remarkable</h2>
+    <p class="subtitle">
+      Open to principal engineering, architecture, and technical leadership roles — especially where infrastructure meets AI.
+    </p>
+    <div class="contact-links">
+      <a href={`mailto:${meta.email}`} class="contact-link">
+        ✉ {meta.email}
+      </a>
+      <a href={meta.linkedin} target="_blank" rel="noopener noreferrer" class="contact-link">
+        ↗ LinkedIn
+      </a>
+      <a href={meta.github} target="_blank" rel="noopener noreferrer" class="contact-link">
+        ↗ GitHub
+      </a>
+      <a href={`tel:${meta.phone}`} class="contact-link">
+        ☎ {meta.phone}
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <a href="#hero" class="back-to-top">↑ Back to top</a>
+    <p>© {new Date().getFullYear()} {meta.name}. Built with Astro.</p>
+  </div>
+</footer>

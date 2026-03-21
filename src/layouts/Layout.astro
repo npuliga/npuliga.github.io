@@ -1,0 +1,115 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Naga Puligadda — Principal Platform Engineer',
+  description = 'Principal Platform Engineer with 15+ years orchestrating planet-scale infrastructure for global fintech and media. RHCA. AI/ML Infrastructure Specialist.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Naga Puligadda" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://npuliga.github.io" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <title>{title}</title>
+
+    <!-- Prevent FOUC: set theme before paint -->
+    <script is:inline>
+      (function() {
+        const stored = localStorage.getItem('theme');
+        if (stored) {
+          document.documentElement.setAttribute('data-theme', stored);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+
+    <!-- Fallback for no-JS: make animated elements visible -->
+    <noscript>
+      <style>
+        .animate-in { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Naga Puligadda",
+        "jobTitle": "Principal Platform Engineer",
+        "url": "https://npuliga.github.io",
+        "email": "Puligadda.Naga@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/naga.puligadda/",
+          "https://github.com/npuliga"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <slot />
+    <script>
+      // Theme toggle (init already done in <head> to prevent FOUC)
+      const toggle = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+      toggle?.addEventListener('click', () => {
+        const current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', current);
+        localStorage.setItem('theme', current);
+      });
+
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+          const href = anchor.getAttribute('href');
+          if (!href || href === '#') return; // skip bare # to avoid querySelector error
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Intersection Observer for scroll animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      );
+      document.querySelectorAll('.animate-in').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

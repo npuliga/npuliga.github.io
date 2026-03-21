@@ -1,0 +1,25 @@
+---
+import resume from '../data/resume.json';
+
+interface LeadershipItem {
+  title: string;
+  description: string;
+}
+
+const { leadership } = resume;
+---
+
+<section id="leadership">
+  <div class="container">
+    <span class="section-label">Leadership & Strategy</span>
+    <h2 class="section-title">How I lead engineering organizations</h2>
+    <div class="leadership-grid">
+      {(leadership as LeadershipItem[]).map((item, i) => (
+        <div class="card leadership-card animate-in" style={`transition-delay: ${i * 80}ms`}>
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

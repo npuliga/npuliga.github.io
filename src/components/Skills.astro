@@ -1,0 +1,29 @@
+---
+import resume from '../data/resume.json';
+
+interface SkillCategory {
+  name: string;
+  items: string[];
+}
+
+const { skills } = resume;
+---
+
+<section id="skills">
+  <div class="container">
+    <span class="section-label">Skills & Expertise</span>
+    <h2 class="section-title">Technical depth across the stack</h2>
+    <div class="skills-grid">
+      {(skills.categories as SkillCategory[]).map((category, i) => (
+        <div class="card skill-category animate-in" style={`transition-delay: ${i * 60}ms`}>
+          <h3>{category.name}</h3>
+          <div class="skill-items">
+            {category.items.map((item: string) => (
+              <span class="tag">{item}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,53 +1,174 @@
-# Naga Puligadda
-![rhce](https://images.credly.com/size/340x340/images/19c4e804-54fe-4857-b022-7cfd5520596c/image.png)
+# npuliga.github.io — Personal Portfolio
 
-[Email](mailto:contactpuligadda@gmail.com) / [LinkedIn](https://www.linkedin.com/in/naga.puligadda/) / [GitHub](https://github.com/npuliga)
+Premium portfolio website for **Naga Puligadda**, built with [Astro](https://astro.build) and deployed automatically to GitHub Pages.
 
-## Professional Experience
+**Live site:** [npuliga.github.io](https://npuliga.github.io)
 
-**Platform Engineering Lead** &nbsp; @ &nbsp; **MASTERCARD** &nbsp; | &nbsp;  **Aug 2019 - _PRESENT_** <br>
-No-code platform that enables professionals to build interactive applications.
-  - Extending and maintaining a company-wide design system
-  - Building a new frontend component library
-  - **Technologies used:** HTML, CSS, Sass, Web Components (LitElement), Vue, TypeScript, Storybook, Jest.
-<br><br>
+---
 
-**Google Season of Docs 2020 | Technical Writer** @ [GraphQL Foundation](https://foundation.graphql.org/) _(Aug 2020 - Jan 2021)_ <br>
-[Google Season of Docs](https://developers.google.com/season-of-docs/docs/participants) is a program matching experienced technical writers with open source organizations.
-  - Created a [Frequently Asked Questions (FAQ) resource](https://graphql.org/faq/) for graphql.org, including all the content and page functionality
-  - Triaged issues and reviewed pull requests to the [GraphQL website](https://github.com/graphql/graphql.github.io/)
-  - Wrote [internal documentation](https://github.com/graphql/graphql.github.io/blob/source/CONTRIBUTING.md) to improve the contributing experience
-  - **_Technologies used:_** CSS, React, TypeScript, Gatsby, GraphQL.
-<br><br>
+## What is this?
 
-**Software Engineer** @ [Meeshkan](http://meeshkan.com/) _(Oct 2019 - Sep 2020)_ <br>
-Early-stage startup focused on automated API testing and NLP.
-  - Built the [website](https://meeshkan.com/) and the [web app](https://app.meeshkan.com/) that visualizes the test reports
-  - Maintained [unmock-js](https://github.com/meeshkan/unmock-js), an open-source fuzz testing library
-  - Ownership of Meeshkan's [documentation](https://meeshkan.com/docs/) and [technical blog](https://meeshkan.com/blog/)
-  - **_Technologies used:_** TypeScript, React, Gatsby, Chakra, Next.js, Node.js, GraphQL, REST, Jest, CircleCI, Python.
-  - **_Selected open-source work:_**
-    - [Jest configuration for the unmock-js runner](https://github.com/meeshkan/unmock-jest-runner)
-    - [Property-based testing for JavaScript developers](https://dev.to/meeshkan/property-based-testing-for-javascript-developers-21b2)
-    - [HTTP Mocking Toolkit documentation](https://github.com/meeshkan/hmt)
-    <br><br>
+A fully static, high-performance personal portfolio site that transforms resume data into a visually compelling presentation. Update the resume JSON file, push to GitHub, and the site rebuilds and deploys automatically.
 
-**Frontend Engineer** @ [Blacklane](https://www.blacklane.com/en) _(Mar 2018 - Sep 2019)_ <br>
-Professional chauffeur service available in over 300 cities worldwide.
-  - Worked in a cross-functional, agile team to rebuild and rebrand the [B2C booking experience](https://www.blacklane.com/en/)
-  - Led an accessibility initiative resulting in the website [passing WCAG 2.0 requirements](https://www.blacklane.com/en/accessibility/)
-  - Extended and maintained a company-wide design system
-  - **_Technologies used:_** HTML, CSS, JavaScript ES6, React, TypeScript, Storybook, Redux, Next.js, REST, Jest, Mocha, Cypress, TravisCI.
-  <br><br>
+**Key features:**
+- Premium, minimal design (Linear/Stripe-inspired)
+- Dark/light theme toggle
+- Fully responsive (mobile, tablet, desktop)
+- SEO optimized with Open Graph + JSON-LD
+- Print-friendly stylesheet
+- Zero backend — fully static
+- Scroll animations
+- < 1 second load time
 
-**Technical Writer** @ [Contentful](https://www.contentful.com/) _(Sep 2017 - Feb 2018)_ <br>
-API-first infrastructure to create, manage and distribute content.
-  - Ownership of Contentful's [technical blog](https://www.contentful.com/blog/)
-  - Wrote [developer experience documentation](https://www.contentful.com/developers/docs/)
-  - Assistance with information architecture and UX writing for the web app
-  - **_Technologies used:_** React, Gatsby, Node.js, GraphQL, REST, Contentful.
-  - **_Selected writing:_**
-    - [JavaScript SDK guide](https://www.contentful.com/developers/docs/javascript/tutorials/using-js-cda-sdk/)
+---
+
+## Architecture
+
+```
+npuliga.github.io/
+├── src/
+│   ├── data/
+│   │   └── resume.json          ← YOUR RESUME DATA (edit this!)
+│   ├── components/
+│   │   ├── Navigation.astro
+│   │   ├── Hero.astro
+│   │   ├── KeyImpact.astro
+│   │   ├── Experience.astro
+│   │   ├── CaseStudies.astro
+│   │   ├── Skills.astro
+│   │   ├── Education.astro
+│   │   └── Contact.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── pages/
+│   │   └── index.astro
+│   └── styles/
+│       └── global.css
+├── public/
+│   └── favicon.svg
+├── .github/workflows/
+│   └── deploy.yml               ← Auto-deploy on push
+├── astro.config.mjs
+├── package.json
+└── Resume_Naga_Puligadda_*.md   ← Original resume (reference)
+```
+
+---
+
+## How to Update Your Resume
+
+**All your resume data lives in one file:** `src/data/resume.json`
+
+### Steps:
+
+1. Open `src/data/resume.json` in any text editor
+2. Edit the sections you want to change:
+   - `meta` — Name, title, contact info
+   - `hero` — Main headline and stats
+   - `keyImpact` — Impact metrics displayed prominently
+   - `experience` — Work history
+   - `caseStudies` — Deep-dive case studies
+   - `skills` — Technical skills by category
+   - `education` — Degrees and certifications
+3. Save the file
+4. Push to GitHub (see deployment section below)
+5. Your site updates automatically!
+
+---
+
+## Setup (for first-time users)
+
+### Prerequisites
+
+1. **Install Git:** Download from [git-scm.com](https://git-scm.com/downloads)
+2. **Install Node.js (v18+):** Download from [nodejs.org](https://nodejs.org/)
+3. Verify installation — open terminal and run:
+   ```
+   git --version
+   node --version
+   npm --version
+   ```
+
+### Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/npuliga/npuliga.github.io.git
+cd npuliga.github.io
+
+# Install dependencies
+npm install
+
+# Start development server (with live reload)
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+The dev server runs at **http://localhost:4321**
+
+---
+
+## Deployment to GitHub Pages
+
+### How it works:
+
+1. You push code to the `main` branch
+2. GitHub Actions runs automatically (`.github/workflows/deploy.yml`)
+3. It installs dependencies, builds the site, and deploys to GitHub Pages
+4. Your site is live at `https://npuliga.github.io` within minutes
+
+### First-time GitHub Pages setup:
+
+1. Go to your repository on GitHub: `github.com/npuliga/npuliga.github.io`
+2. Click **Settings** → **Pages** (in the left sidebar)
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**
+4. Push your code to `main` — the workflow will run automatically
+
+### Pushing updates:
+
+```bash
+git add .
+git commit -m "Update resume"
+git push origin main
+```
+
+That's it. The site will rebuild and deploy automatically.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | [Astro](https://astro.build) (static site generator) |
+| Styling | Custom CSS (CSS custom properties, no framework) |
+| Fonts | Inter (Google Fonts) |
+| Hosting | GitHub Pages |
+| CI/CD | GitHub Actions |
+| Data | JSON (structured resume data) |
+
+---
+
+## Common Issues & Fixes
+
+| Problem | Solution |
+|---------|----------|
+| `npm install` fails | Make sure Node.js 18+ is installed. Run `node --version` to check. |
+| Site looks broken locally | Run `npm run dev` not `npm run build`. Dev server has hot reload. |
+| Changes not showing on GitHub Pages | Check Actions tab on GitHub. The workflow may still be running. |
+| Build fails on GitHub | Check the Actions tab for error logs. Usually a JSON syntax error in `resume.json`. |
+| Fonts not loading | Check internet connection. Fonts load from Google Fonts CDN. |
+
+---
+
+## License
+
+MIT
     - [Node.js example app and courses](https://the-example-app-nodejs.contentful.com/courses)
     - Concept references: [Domain model](https://www.contentful.com/developers/docs/concepts/domain-model/), [Multiple environments](https://www.contentful.com/developers/docs/concepts/multiple-environments/)
     <br><br>

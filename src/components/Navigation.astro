@@ -1,0 +1,42 @@
+---
+import resume from '../data/resume.json';
+const { meta } = resume;
+---
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">{meta.name.split(' ')[0].toLowerCase()}<span style="color: var(--color-accent)">.</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="icon-moon">☾</span>
+        <span class="icon-sun">☀</span>
+      </button>
+      <button class="nav-mobile-toggle" id="nav-mobile-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const mobileToggle = document.getElementById('nav-mobile-toggle');
+  const navLinks = document.getElementById('nav-links');
+  mobileToggle?.addEventListener('click', () => {
+    navLinks?.classList.toggle('open');
+  });
+  // Close mobile nav when a link is clicked
+  navLinks?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks?.classList.remove('open');
+    });
+  });
+</script>

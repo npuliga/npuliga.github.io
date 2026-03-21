@@ -1,0 +1,37 @@
+---
+import resume from '../data/resume.json';
+
+interface EducationItem {
+  degree: string;
+  institution: string;
+  score?: string;
+  focus?: string;
+}
+
+const { education, certifications } = resume;
+---
+
+<section id="education">
+  <div class="container">
+    <span class="section-label">Education & Certifications</span>
+    <h2 class="section-title">Academic credentials & professional recognition</h2>
+
+    <div class="education-grid">
+      {(education as EducationItem[]).map((edu, i) => (
+        <div class="card education-card animate-in" style={`transition-delay: ${i * 80}ms`}>
+          <div class="degree">{edu.degree}</div>
+          <div class="institution">{edu.institution}</div>
+          {edu.score && <div class="score">{edu.score}</div>}
+          {edu.focus && <div class="focus">{edu.focus}</div>}
+        </div>
+      ))}
+    </div>
+
+    <h3 style="margin-bottom: var(--space-lg); font-size: 1.1rem;">Professional Certifications</h3>
+    <ul class="certifications-list">
+      {(certifications as string[]).map((cert, i) => (
+        <li class="animate-in" style={`transition-delay: ${i * 40}ms`}>{cert}</li>
+      ))}
+    </ul>
+  </div>
+</section>

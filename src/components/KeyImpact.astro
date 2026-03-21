@@ -1,0 +1,20 @@
+---
+import resume from '../data/resume.json';
+const { keyImpact } = resume;
+---
+
+<section id="impact">
+  <div class="container">
+    <span class="section-label">Key Impact</span>
+    <h2 class="section-title">Numbers that tell the story</h2>
+    <div class="impact-grid">
+      {keyImpact.map((item: { metric: string; description: string; context: string }, i: number) => (
+        <div class="card impact-card animate-in" style={`transition-delay: ${i * 80}ms`}>
+          <div class="impact-metric">{item.metric}</div>
+          <div class="impact-description">{item.description}</div>
+          <div class="impact-context">{item.context}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

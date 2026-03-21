@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "name": "Naga Puligadda",
+    "title": "Principal Platform Engineer",
+    "tagline": "AI/ML Infrastructure & Cloud Strategy | RHCA",
+    "email": "Puligadda.Naga@gmail.com",
+    "location": "Pune, India",
+    "phone": "+91-9370049554",
+    "linkedin": "https://www.linkedin.com/in/naga.puligadda/",
+    "github": "https://github.com/npuliga",
+    "website": "https://npuliga.github.io"
+  },
+
+  "hero": {
+    "headline": "I architect planet-scale infrastructure where every second of downtime costs millions.",
+    "subheadline": "Principal Platform Engineer with 15+ years orchestrating mission-critical systems for global fintech and media. Red Hat Certified Architect. AI/ML infrastructure specialist. I bridge the gap between reliability engineering and modern AI workloads.",
+    "stats": [
+      { "value": "200+", "label": "Payment Gateways Managed" },
+      { "value": "15+", "label": "Years of Engineering Leadership" },
+      { "value": "99.99%", "label": "Availability Achieved" },
+      { "value": "0", "label": "Data Loss Incidents" }
+    ]
+  },
+
+  "keyImpact": [
+    {
+      "metric": "300%",
+      "description": "Platform scalability increase through global virtualization architecture",
+      "context": "Mastercard Edge Platform"
+    },
+    {
+      "metric": "50%",
+      "description": "Reduction in platform downtime via advanced monitoring & alerting",
+      "context": "200+ global endpoints"
+    },
+    {
+      "metric": "90%",
+      "description": "Decrease in deployment errors through automated CI/CD pipelines",
+      "context": "API Gateway handling 5M+ requests/day"
+    },
+    {
+      "metric": "$100K+",
+      "description": "Annual savings through observability-driven incident reduction",
+      "context": "AppDynamics & Splunk implementation"
+    },
+    {
+      "metric": "2 wks → 1 day",
+      "description": "Upgrade cycle reduction for mission-critical payment infrastructure",
+      "context": "End-to-end pipeline automation"
+    },
+    {
+      "metric": "82%",
+      "description": "Reduction in merge conflicts through smart branching strategy",
+      "context": "Release engineering transformation"
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "Mastercard",
+      "location": "Pune, India / New York, NY",
+      "role": "Lead Platforms Engineer / Principal Architect (DevOps & Edge)",
+      "period": "Sep 2019 – Present",
+      "summary": "Strategic leadership of the Mastercard Edge Platform, overseeing infrastructure for 200+ global payment gateways processing millions of transactions daily.",
+      "highlights": [
+        "Spearheaded migration of 200+ mission-critical Virtual MIPs from CentOS 7 to Oracle Linux 8 with zero data loss and 100% service continuity",
+        "Architected physical-to-virtual conversion across 200+ global endpoints in under 2 months, increasing platform scalability by 300%",
+        "Designed centralized Next-Gen Certificate Management System (NECMS) integrating Venafi and Ansible for mTLS automation under strict PCI compliance",
+        "Reduced upgrade cycles from 2 weeks to 1 day and configuration time from 2 days to 30 minutes, cutting operational costs by 30%",
+        "Improved platform performance by 20% through resource optimization, directly contributing to revenue increase",
+        "Reduced platform downtime by 50% with advanced monitoring, resulting in 90% decrease in customer complaints"
+      ],
+      "tags": ["Platform Architecture", "Zero-Downtime Migration", "PCI Compliance", "mTLS", "Ansible"]
+    },
+    {
+      "company": "KK Software Associates — Mastercard",
+      "location": "Various Locations",
+      "role": "DevSecOps Consultant",
+      "period": "Aug 2018 – Aug 2019",
+      "summary": "Led a team of 6 engineers deploying next-generation API Gateway infrastructure for Mastercard.",
+      "highlights": [
+        "Deployed NGINX Plus API Gateway handling 5 million+ concurrent requests/day",
+        "Optimized XML Gateway efficiency, reducing policy deployment costs by 30% and errors by 90%",
+        "Designed zero-downtime CI/CD pipelines using Chef Habitat and XL Release"
+      ],
+      "tags": ["API Gateway", "NGINX Plus", "Team Leadership", "CI/CD"]
+    },
+    {
+      "company": "KK Software Associates — Athene",
+      "location": "Des Moines, Iowa",
+      "role": "DevOps Architect",
+      "period": "Jun 2018 – Dec 2018",
+      "summary": "Designed CI/CD infrastructure and release engineering strategy for financial services platform.",
+      "highlights": [
+        "Designed 20+ CI/CD pipelines using SaltStack and Python, reducing release cycles from 6 weeks to 2 weeks",
+        "Saved $75,000 per release through pipeline automation",
+        "Engineered 'No-Conflict' branch strategy, reducing merge conflicts by 82%",
+        "Automated database deployments via Flyway DB, reducing deployment time by 75%"
+      ],
+      "tags": ["CI/CD Architecture", "SaltStack", "Release Engineering", "Cost Optimization"]
+    },
+    {
+      "company": "KK Software Associates — Marvel",
+      "location": "NYC, NY",
+      "role": "Site Reliability Engineer",
+      "period": "Jan 2018 – Jul 2018",
+      "summary": "Architected headless CMS infrastructure for Marvel's digital presence.",
+      "highlights": [
+        "Architected headless Drupal/MEAN stack on Rackspace, reducing time-to-market by 50% and TCO by 30%",
+        "Automated infrastructure using Python and Ansible, improving reliability to 99.9%",
+        "Reduced provisioning time for new environments by 75% with Ansible PaaS/CaaS integrations"
+      ],
+      "tags": ["SRE", "Headless CMS", "Ansible", "Infrastructure Automation"]
+    },
+    {
+      "company": "KK Software Associates — IAC Applications",
+      "location": "Yonkers, NY",
+      "role": "DevSecOps Engineer",
+      "period": "Jul 2017 – Dec 2017",
+      "summary": "Implemented enterprise-scale Identity & Access Management across large server fleet.",
+      "highlights": [
+        "Implemented Centrify IAM across 6,000 servers, reducing provisioning from 2 hours to 20 minutes",
+        "Reduced security incidents by 50% and vulnerability remediation time by 75%",
+        "Automated DirectControl AD joins and compliance audit reporting"
+      ],
+      "tags": ["IAM", "Security", "Centrify", "Compliance"]
+    },
+    {
+      "company": "KK Software Associates — Carnival Corporation",
+      "location": "Seattle, WA",
+      "role": "DevSecOps Consultant",
+      "period": "Jan 2017 – Jun 2017",
+      "summary": "Led cloud migration and performance optimization for global cruise line infrastructure.",
+      "highlights": [
+        "Spearheaded AWS infrastructure with Akamai caching, delivering 50% performance boost and 30% cost savings",
+        "Orchestrated Rackspace-to-AWS migration achieving 99.99% availability",
+        "Implemented AppDynamics and Splunk, reducing MTTR by 15 minutes and saving $100K annually"
+      ],
+      "tags": ["AWS Migration", "Performance", "Observability", "Cost Optimization"]
+    },
+    {
+      "company": "KK Software Associates — Wells Fargo Advisors",
+      "location": "St Louis, MO",
+      "role": "DevSecOps Engineer",
+      "period": "Feb 2016 – Jan 2017",
+      "summary": "Designed hybrid cloud deployment blueprints for major financial services firm.",
+      "highlights": [
+        "Developed enterprise blueprints for hybrid cloud deployments using Puppet DSL, Vagrant, and Git",
+        "Designed and implemented Anthill-Pro and UrbanCode Deploy pipelines for Java, .NET, and Unix",
+        "Created custom migration scripts and RESTful APIs for Puppet Enterprise Node Classifier"
+      ],
+      "tags": ["Hybrid Cloud", "Puppet", "CI/CD Integration", "Financial Services"]
+    },
+    {
+      "company": "The Walt Disney Company",
+      "location": "Orlando, FL",
+      "role": "Lead DevOps Engineer (via HCL America)",
+      "period": "Mar 2015 – Jan 2016",
+      "summary": "Managed Configuration-as-a-Service for Disney Parks & Resorts infrastructure.",
+      "highlights": [
+        "Oversaw Configuration-as-a-Service for 5,000+ servers within Disney Parks & Resorts",
+        "Developed Chef recipes with Test Kitchen, Foodcritic, and Rubocop for automated compliance testing",
+        "Managed CI systems (Bamboo, Rundeck, Jenkins) for high-traffic guest-facing applications"
+      ],
+      "tags": ["Chef", "Configuration Management", "Large-Scale Infrastructure"]
+    },
+    {
+      "company": "Unilever (via HCL Technologies)",
+      "location": "Bangalore, India",
+      "role": "Lead DevOps Engineer",
+      "period": "Sep 2012 – Feb 2015",
+      "summary": "Cloud migration and infrastructure automation for global consumer goods company.",
+      "highlights": [
+        "Migrated applications to AWS Elastic Beanstalk with high-availability auto-scaling groups",
+        "Automated infrastructure operations using Perl scripts, resolving recurring issues permanently"
+      ],
+      "tags": ["AWS", "Cloud Migration", "Automation"]
+    },
+    {
+      "company": "Optum UHG (via Cognizant)",
+      "location": "Plymouth, MN",
+      "role": "Software Engineer",
+      "period": "Sep 2009 – Aug 2012",
+      "summary": "Healthcare platform engineering focused on reliability and environment management.",
+      "highlights": [
+        "Reduced MTTR by 65% for Claims Processing batch jobs through new validation environments",
+        "Achieved 100% on-time delivery and 99.9% uptime for critical batch jobs"
+      ],
+      "tags": ["Healthcare", "Reliability", "Batch Processing"]
+    }
+  ],
+
+  "caseStudies": [
+    {
+      "title": "Zero-Downtime Migration of 200+ Payment Gateways",
+      "challenge": "Mastercard's Virtual MIP fleet of 200+ nodes was running CentOS 7 approaching end-of-life, creating compliance and security exposure for systems processing millions of daily payment transactions.",
+      "approach": "Designed a phased migration strategy with custom pipeline logic that handled node-by-node OS transitions from CentOS 7 to Oracle Linux 8. Built automated validation gates ensuring each node was fully operational before proceeding to the next.",
+      "outcome": "Achieved zero data loss and 100% service continuity across the entire fleet. No customer-facing impact during the migration window.",
+      "impact": ["Zero data loss", "100% service continuity", "Full PCI compliance restored"],
+      "tags": ["Migration", "Zero-Downtime", "PCI Compliance"]
+    },
+    {
+      "title": "Global Virtualization: Physical to vMIP at Scale",
+      "challenge": "Mastercard needed to convert physical payment infrastructure to virtualized nodes across 200+ global endpoints to improve scalability and reduce provisioning bottlenecks from weeks to minutes.",
+      "approach": "Architected an ISO-based deployment solution that standardized the conversion process. Created reusable automation templates that could be applied across diverse hardware and network configurations globally.",
+      "outcome": "Completed the conversion of 200+ endpoints in under 2 months — a timeline previously considered impossible. Provisioning dropped from weeks to minutes.",
+      "impact": ["300% scalability increase", "Weeks → Minutes provisioning", "200+ endpoints in 2 months"],
+      "tags": ["Virtualization", "Scale", "Automation"]
+    },
+    {
+      "title": "Next-Gen Certificate Management for PCI Compliance",
+      "challenge": "Manual mTLS certificate management across Mastercard's payment gateway fleet was error-prone, audit-risky, and consumed significant engineering hours — a critical liability in a PCI-regulated environment.",
+      "approach": "Designed NECMS (Next-Gen Certificate Management System) integrating Venafi for certificate authority and Ansible for automated lifecycle management. Built self-service workflows for high-value client onboarding.",
+      "outcome": "Eliminated manual certificate toil entirely. Achieved continuous PCI compliance with automated rotation, monitoring, and audit trail generation.",
+      "impact": ["Zero manual certificate management", "Continuous PCI compliance", "Self-service client onboarding"],
+      "tags": ["Security", "mTLS", "Venafi", "Ansible"]
+    },
+    {
+      "title": "API Gateway Serving 5M+ Daily Requests",
+      "challenge": "Mastercard needed a next-generation API Gateway capable of handling 5 million+ concurrent requests per day with zero-downtime deployment capability.",
+      "approach": "Led a team of 6 engineers to deploy NGINX Plus with automated policy management. Built CI/CD pipelines using Chef Habitat and XL Release for seamless upgrades. Optimized XML Gateway through Groovy/Jenkins automation.",
+      "outcome": "Successfully deployed gateway handling 5M+ requests/day. Reduced policy deployment costs by 30% and deployment errors by 90%.",
+      "impact": ["5M+ requests/day", "30% cost reduction", "90% fewer deployment errors"],
+      "tags": ["API Gateway", "NGINX", "High-Throughput"]
+    }
+  ],
+
+  "skills": {
+    "categories": [
+      {
+        "name": "Strategic Leadership",
+        "items": ["Technical Strategy & Roadmapping", "Digital Transformation", "Cost Optimization (FinOps)", "Cross-Functional Mentorship", "Engineering Culture Development"]
+      },
+      {
+        "name": "AI & Data Infrastructure",
+        "items": ["MLOps", "RAG Pipelines", "Vector Databases", "LLM Orchestration", "GPU Resource Management"]
+      },
+      {
+        "name": "Cloud & Infrastructure",
+        "items": ["AWS", "Azure", "OpenShift", "Docker/Podman", "VMware", "KVM"]
+      },
+      {
+        "name": "Automation & IaC",
+        "items": ["Ansible (Expert)", "Terraform", "Puppet", "Chef", "SaltStack"]
+      },
+      {
+        "name": "CI/CD & DevOps",
+        "items": ["Jenkins", "GitLab CI", "UrbanCode Deploy", "Maven", "Artifactory"]
+      },
+      {
+        "name": "Observability",
+        "items": ["Splunk", "AppDynamics", "Prometheus", "Grafana", "ELK Stack", "CloudWatch"]
+      },
+      {
+        "name": "Security & Identity",
+        "items": ["Zero Trust (mTLS)", "Centrify", "SELinux", "Kerberos"]
+      },
+      {
+        "name": "Languages",
+        "items": ["Python", "Shell Scripting", "SQL", "Groovy", "Perl"]
+      }
+    ]
+  },
+
+  "education": [
+    {
+      "degree": "Post Graduate Diploma in Artificial Intelligence & Machine Learning",
+      "institution": "International Institute of Information Technology, Hyderabad (IIIT-H)",
+      "score": "90% (Distinction)",
+      "focus": "Generative AI, Computer Vision, NLP, and RAG Architectures"
+    },
+    {
+      "degree": "Master of Science in Computer Information Systems",
+      "institution": "Grand Valley State University, MI"
+    }
+  ],
+
+  "certifications": [
+    "Red Hat Certified Architect (RHCA) in Infrastructure",
+    "Red Hat Certified Engineer (RHCE)",
+    "Red Hat Certified Specialist: OpenShift Administration",
+    "Red Hat Certified Specialist: Ansible Automation",
+    "Certified Chef Developer",
+    "IBM Certified Deployment Professional (UrbanCode Deploy)",
+    "Certified Akamai Web Performance Administrator",
+    "ITIL Foundation (IT Service Management)"
+  ],
+
+  "leadership": [
+    {
+      "title": "Technical Strategy & Vision",
+      "description": "Defined platform roadmaps for Mastercard's Edge Platform, aligning infrastructure investments with business growth targets and regulatory requirements across 200+ global endpoints."
+    },
+    {
+      "title": "Team Building & Mentorship",
+      "description": "Led and mentored cross-functional engineering teams of 6–12 engineers across DevOps, SRE, and platform disciplines. Established engineering culture focused on ownership and continuous improvement."
+    },
+    {
+      "title": "Cost Optimization (FinOps)",
+      "description": "Drove FinOps initiatives that reduced infrastructure costs by 30% across multiple engagements through right-sizing, automation, and cloud migration strategies."
+    },
+    {
+      "title": "AI-Ready Infrastructure",
+      "description": "Bridging traditional reliability engineering with modern AI workloads — designing MLOps pipelines, RAG architectures, and GPU resource management systems for next-generation platforms."
+    }
+  ]
+}

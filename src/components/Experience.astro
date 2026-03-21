@@ -1,0 +1,47 @@
+---
+import resume from '../data/resume.json';
+
+interface ExperienceItem {
+  company: string;
+  location: string;
+  role: string;
+  period: string;
+  summary: string;
+  highlights: string[];
+  tags: string[];
+}
+
+const { experience } = resume;
+---
+
+<section id="experience">
+  <div class="container">
+    <span class="section-label">Experience</span>
+    <h2 class="section-title">Where I've made an impact</h2>
+    <div class="experience-list">
+      {(experience as ExperienceItem[]).map((job, i) => (
+        <div class="experience-card animate-in" style={`transition-delay: ${i * 60}ms`}>
+          <div class="experience-meta">
+            <div class="experience-period">{job.period}</div>
+            <div class="experience-location">{job.location}</div>
+          </div>
+          <div class="experience-body">
+            <h3>{job.role}</h3>
+            <div class="experience-company">{job.company}</div>
+            <p class="experience-summary">{job.summary}</p>
+            <ul class="experience-highlights">
+              {job.highlights.map((h: string) => (
+                <li>{h}</li>
+              ))}
+            </ul>
+            <div class="tags">
+              {job.tags.map((tag: string) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
