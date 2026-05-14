@@ -18,8 +18,6 @@ interface ProfessionalCert {
 
 interface CertificationsData {
   professional: ProfessionalCert[];
-  courses_redhat: string[];
-  courses_oreilly: string[];
   legacy: string[];
 }
 
@@ -56,24 +54,10 @@ const certs = certifications as unknown as CertificationsData;
       ))}
     </div>
 
-    <h3 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md); font-size: 1.1rem;">Red Hat Training & Courses <span style="color: var(--color-text-secondary); font-weight: 400;">({certs.courses_redhat.length} courses completed)</span></h3>
-    <ul class="certifications-list compact">
-      {certs.courses_redhat.map((cert, i) => (
-        <li class="animate-in" style={`transition-delay: ${(i * 20) + 500}ms`}>{cert}</li>
-      ))}
-    </ul>
-
-    <h3 style="margin-top: var(--space-xl); margin-bottom: var(--space-md); font-size: 1.1rem;">O'Reilly Media Courses <span style="color: var(--color-text-secondary); font-weight: 400;">({certs.courses_oreilly.length} courses completed)</span></h3>
-    <ul class="certifications-list compact">
-      {certs.courses_oreilly.map((cert, i) => (
-        <li class="animate-in" style={`transition-delay: ${(i * 30) + 700}ms`}>{cert}</li>
-      ))}
-    </ul>
-
     <h3 style="margin-top: var(--space-xl); margin-bottom: var(--space-md); font-size: 1.1rem;">Legacy Certifications</h3>
     <ul class="certifications-list">
       {certs.legacy.map((cert, i) => (
-        <li class="animate-in" style={`transition-delay: ${(i * 40) + 900}ms`}>{cert}</li>
+        <li class="animate-in" style={`transition-delay: ${(i * 40) + 400}ms`}>{cert}</li>
       ))}
     </ul>
   </div>

@@ -59,16 +59,16 @@ function generateResumePDF() {
   doc.y = currentY;
   addSectionHeader(doc, 'PROFESSIONAL SUMMARY');
   doc.font(FONTS.regular).fontSize(10).fillColor(COLORS.text);
-  doc.text(resumeData.hero.subheadline, { align: 'justify', lineGap: 3 });
+  doc.text(resumeData.executiveSummary.summary, { align: 'justify', lineGap: 3 });
   doc.moveDown(0.5);
 
   // --- KEY IMPACT ---
   addSectionHeader(doc, 'KEY ACHIEVEMENTS');
   doc.font(FONTS.regular).fontSize(10);
   
-  resumeData.keyImpact.slice(0, 6).forEach((impact, idx) => {
-    doc.font(FONTS.bold).fillColor(COLORS.primary).text(impact.metric, { continued: true });
-    doc.font(FONTS.regular).fillColor(COLORS.text).text(` ${impact.description} (${impact.context})`);
+  resumeData.selectedAchievements.slice(0, 6).forEach((impact, idx) => {
+    doc.font(FONTS.bold).fillColor(COLORS.primary).text(impact.title, { continued: true });
+    doc.font(FONTS.regular).fillColor(COLORS.text).text(` ${impact.description}`);
     if (idx < 5) doc.moveDown(0.3);
   });
 
@@ -152,11 +152,8 @@ function generateResumePDF() {
 
   doc.moveDown(0.5);
   doc.font(FONTS.bold).fontSize(10);
-  doc.text('Continuous Learning (2024-2025):');
+  doc.text('Continuous Learning:');
   doc.moveDown(0.3);
-  doc.font(FONTS.regular).fontSize(9);
-  doc.text(`Red Hat Training: ${resumeData.certifications.courses_redhat.length} courses completed in OpenShift, Kubernetes, Ansible, and Virtualization`);
-  doc.text(`AWS & Cloud: ${resumeData.certifications.courses_oreilly.length} specialized courses in AWS, containers, and Kubernetes`);
 
   // Finish the document
   doc.end();
